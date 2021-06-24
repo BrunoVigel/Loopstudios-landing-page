@@ -33,7 +33,7 @@ img {
 }
 
 .section {
-  padding-top: 8rem;
+  padding-top: 6rem;
 }
 
 body {
@@ -48,7 +48,7 @@ h2 {
 
 /* ============================ HEADER =============================== */
 
-header nav.container {
+header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,11 +63,12 @@ header h1 {
   border: 2px solid white;
   padding: 1.5rem 0 1.5rem 1.5rem;
   margin-top: 25vh;
+  max-width: 20rem;
 }
 
 header.hero {
   background-image: url('assets/mobile/image-hero.jpg');
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
@@ -80,6 +81,10 @@ header.hero {
   padding: 0 1rem;
 }
 
+#home .text h2 {
+  margin: 2rem 0 1rem 0;
+}
+
 #home .text p {
   color: var(--dark-gray);
 }
@@ -87,6 +92,7 @@ header.hero {
 /* ============================ CREATION =============================== */
 #creations h2 {
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 #creations .container {
@@ -104,7 +110,7 @@ header.hero {
   margin: 1.5rem auto 0;
 
   font-family: 'Josefin Sans', serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: black;
 
   padding: 0.75rem 3.25rem;
@@ -128,6 +134,11 @@ footer {
   align-items: center;
 }
 
+.footer-logo svg {
+  display: flex;
+  margin: 0 auto;
+}
+
 footer ul {
   display: flex;
   flex-direction: column;
@@ -136,7 +147,7 @@ footer ul {
 }
 
 footer ul li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 footer ul li a {
@@ -161,4 +172,16 @@ footer ul li a:hover::after {
 }
 
 footer .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+footer .socials svg {
+  margin-right: 1rem;
+}
+
+footer p {
+  margin-bottom: 4rem;
 }
