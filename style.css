@@ -1,0 +1,65 @@
+/* ============================ RESET =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* ============================ VARIABLES =============================== */
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+/* ============================ base =============================== */
+.container {
+  padding: 0 1.5rem;
+}
+
+/* ============================ HEADER =============================== */
+header {
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+
+header .logo {
+}
+
+header h1 {
+  font-family: 'Josefin Sans', serif;
+  font-weight: 300;
+  color: white;
+  border: 2px solid white;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  margin-top: 25vh;
+}
+
+header.hero {
+  background-image: url('assets/mobile/image-hero.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
