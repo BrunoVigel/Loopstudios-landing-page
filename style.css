@@ -32,23 +32,33 @@ img {
   padding: 0 1.5rem;
 }
 
-/* ============================ HEADER =============================== */
-header {
+.section {
+  padding-top: 8rem;
 }
 
-header .header-content {
+body {
+  font-family: 'Alata', serif;
+}
+
+h2 {
+  font-family: 'Josefin Sans', serif;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+/* ============================ HEADER =============================== */
+
+header nav.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 1.5rem;
 }
 
-header .logo {
-}
-
 header h1 {
   font-family: 'Josefin Sans', serif;
   font-weight: 300;
+  font-size: 2.5em;
   color: white;
   border: 2px solid white;
   padding: 1.5rem 0 1.5rem 1.5rem;
@@ -62,4 +72,93 @@ header.hero {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+/* ============================ HOME =============================== */
+#home .text {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+#home .text p {
+  color: var(--dark-gray);
+}
+
+/* ============================ CREATION =============================== */
+#creations h2 {
+  text-align: center;
+}
+
+#creations .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#creations .creations-images img {
+  margin-bottom: 1.5rem;
+}
+
+#creations .button {
+  display: inline-block;
+  margin: 1.5rem auto 0;
+
+  font-family: 'Josefin Sans', serif;
+  font-size: 1.5em;
+  color: black;
+
+  padding: 0.75rem 3.25rem;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+
+#creations .button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ============================ FOOTER =============================== */
+footer {
+  margin-top: 8rem;
+  padding-top: 4rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+footer ul li {
+  margin-bottom: 1rem;
+}
+
+footer ul li a {
+  color: white;
+  transition: 0.2s;
+  position: relative;
+}
+
+footer ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  transition: width 0.2s;
+}
+
+footer ul li a:hover::after {
+  width: 100%;
+}
+
+footer .socials {
 }
