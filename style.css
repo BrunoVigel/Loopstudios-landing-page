@@ -18,6 +18,10 @@ img {
   height: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ============================ VARIABLES =============================== */
 
 :root {
@@ -36,6 +40,11 @@ img {
   padding-top: 6rem;
 }
 
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
 body {
   font-family: 'Alata', serif;
 }
@@ -47,13 +56,6 @@ h2 {
 }
 
 /* ============================ HEADER =============================== */
-
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 1.5rem;
-}
 
 header h1 {
   font-family: 'Josefin Sans', serif;
@@ -73,6 +75,84 @@ header.hero {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+/* ============================ NAV =============================== */
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+
+.menu a {
+  color: white;
+  font-family: 'Josefin Sans', serif;
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
+}
+
+nav .menu ul {
+  display: none;
+}
+
+/* Mostrar menu */
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background-color: black;
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  place-content: center;
+}
+
+/* toggle menu*/
+.toggle {
+  cursor: pointer;
+}
+
+nav .icon-close {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  top: -1.5rem;
+  right: 1.5rem;
+
+  transition: 0.2s;
+}
+
+nav.show .icon-close {
+  visibility: visible;
+  opacity: 1;
+  top: 1.5rem;
+}
+
+nav.show .menu ul {
+  display: grid;
+}
+
+nav.show ul.grid {
+  gap: 2rem;
+  position: fixed;
+  top: 25%;
+  left: 10%;
 }
 
 /* ============================ HOME =============================== */
@@ -101,8 +181,20 @@ header.hero {
   align-items: center;
 }
 
-#creations .creations-images img {
+#creations .card {
   margin-bottom: 1.5rem;
+  position: relative;
+}
+
+#creations .card p {
+  font-family: 'Josefin Sans', serif;
+  font-size: 1.5em;
+  font-weight: 200;
+  color: white;
+
+  position: absolute;
+  top: 3.2rem;
+  left: 1.2rem;
 }
 
 #creations .button {
@@ -114,7 +206,7 @@ header.hero {
   color: black;
 
   padding: 0.75rem 3.25rem;
-  border: 1px solid black;
+  border: 2px solid var(--very-dark-gray);
   transition: 0.3s;
 }
 
@@ -184,4 +276,20 @@ footer .socials svg {
 
 footer p {
   margin-bottom: 4rem;
+}
+
+@media (min-width: 1440px) {
+  /* ============================ base =============================== */
+  .container {
+    padding: 0 10.5rem;
+  }
+
+  header.hero {
+    background-image: url(assets/desktop/image-hero.jpg);
+    width: 100%;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
