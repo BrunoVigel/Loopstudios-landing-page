@@ -65,7 +65,7 @@ header h1 {
   border: 2px solid white;
   padding: 1.5rem 0 1.5rem 1.5rem;
   margin-top: 25vh;
-  max-width: 20rem;
+  max-width: 19rem;
 }
 
 header.hero {
@@ -75,6 +75,10 @@ header.hero {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+header .logo {
+  z-index: 999;
 }
 
 /* ============================ NAV =============================== */
@@ -274,6 +278,10 @@ footer .socials svg {
   margin-right: 1rem;
 }
 
+footer .socials svg:nth-child(4) {
+  margin-right: 0;
+}
+
 footer p {
   margin-bottom: 4rem;
 }
@@ -284,6 +292,39 @@ footer p {
     padding: 0 10.5rem;
   }
 
+  /* ============================ header =============================== */
+  header h1 {
+    font-size: 6em;
+    font-weight: 200;
+    padding: 1.5rem 6rem 1.5rem 1.5rem;
+    max-width: 55rem;
+  }
+
+  header nav {
+    padding-top: 5rem;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    gap: 2rem;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .toggle {
+    display: none;
+  }
+
   header.hero {
     background-image: url(assets/desktop/image-hero.jpg);
     width: 100%;
@@ -291,5 +332,30 @@ footer p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+  /* ============================ footer =============================== */
+  footer.container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 4rem;
+  }
+
+  .footer-logo svg {
+    display: flex;
+    margin: 0;
+  }
+
+  footer ul li {
+    margin-right: 3.2rem;
+  }
+
+  footer ul {
+    flex-direction: row;
+  }
+
+  footer .socials {
+    display: flex;
+    justify-content: flex-end;
   }
 }
