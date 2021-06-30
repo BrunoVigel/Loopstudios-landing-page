@@ -14,8 +14,7 @@ a {
 }
 
 img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
 }
 
 html {
@@ -271,7 +270,7 @@ footer .socials {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 footer .socials svg {
@@ -289,7 +288,7 @@ footer p {
 @media (min-width: 1440px) {
   /* ============================ base =============================== */
   .container {
-    padding: 0 10.5rem;
+    padding: 0 15rem;
   }
 
   /* ============================ header =============================== */
@@ -317,7 +316,7 @@ footer p {
   }
 
   nav .menu ul li a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
   }
 
@@ -332,6 +331,55 @@ footer p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+  /* ============================ HOME =============================== */
+  #home .text {
+    max-width: 28rem;
+    text-align: initial;
+    padding: 5rem 0 0 5rem;
+    background-color: white;
+}
+  }
+
+
+  /* ============================ CREATION =============================== */
+
+  #creations .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  .creations-images {
+    margin-top: 6rem;
+  }
+
+  #creations h2 {
+    order: -2;
+    display: inline-block;
+    margin: 0;
+  }
+
+  #creations .button {
+    order: -1;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .creations-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    width: 100%;
+  }
+
+  #creations .card p {
+    top: unset;
+    bottom: 3.2rem;
+    left: 2rem;
   }
 
   /* ============================ footer =============================== */
@@ -357,5 +405,9 @@ footer p {
   footer .socials {
     display: flex;
     justify-content: flex-end;
+  }
+
+  footer p {
+    margin: 2rem 0;
   }
 }
