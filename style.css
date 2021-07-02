@@ -61,18 +61,20 @@ a.link {
 }
 
 a.link::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
   content: '';
-  width: 0%;
+  display: block;
   height: 2px;
-  background: white;
+  left: 50%;
   position: absolute;
-  left: 0;
-  bottom: -0.2rem;
-  transition: width 0.2s;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
-
 a.link:hover::after {
   width: 100%;
+  left: 0;
 }
 
 /* ============================ HEADER =============================== */
@@ -407,6 +409,17 @@ footer p {
 
   #creations .card:hover {
     cursor: pointer;
+  }
+
+  #creations .card picture::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.5s;
   }
 
   #creations .card:hover picture::after {
