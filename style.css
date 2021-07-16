@@ -348,7 +348,7 @@ footer p {
   }
 
   /* ============================ HOME =============================== */
-  #home picture {
+  #home{
     position: relative;
   }
 
@@ -359,7 +359,7 @@ footer p {
     background-color: white;
     position: absolute;
     bottom: 0;
-    right: -18rem;
+    left: 42%;
   }
 
   /* ============================ CREATION =============================== */
