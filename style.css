@@ -191,6 +191,8 @@ nav.show ul.grid {
 
 /* ============================ HOME =============================== */
 #home .container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -350,6 +352,10 @@ footer p {
   /* ============================ HOME =============================== */
   #home{
     position: relative;
+  }
+
+  #home .container {
+    align-items: initial;
   }
 
   #home .text {
